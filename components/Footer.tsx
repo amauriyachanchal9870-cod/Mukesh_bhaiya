@@ -1,13 +1,25 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Facebook, Youtube, Phone, MapPin, Instagram, MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function Footer() {
     return (
-        <footer className="bg-slate-900 text-white">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <footer className="relative bg-slate-900 text-white overflow-hidden">
+            {/* Background Image */}
+            <div className="absolute inset-0 z-0">
+                <Image
+                    src="/images/gallery_villagers.png"
+                    alt="Village Background"
+                    fill
+                    className="object-cover opacity-20"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/90 to-slate-900/80"></div>
+            </div>
+
+            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {/* Column 1: About */}
                     <div>
